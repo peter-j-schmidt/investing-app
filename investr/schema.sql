@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS stocks_owned;
 
 
 CREATE TABLE user (
@@ -24,4 +25,4 @@ CREATE TABLE stocks_owned (
     stock_symbol TEXT NOT NULL,
     stock_name TEXT NOT NULL,
     total_shares INTEGER NOT NULL,
-)
+);
