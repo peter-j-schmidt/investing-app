@@ -28,4 +28,4 @@ def indices():
 
         index_info = indices()
 
-        return render_template('account/indices.html', index_info)
+        return render_template('account/indices.html', index_info=index_info)
