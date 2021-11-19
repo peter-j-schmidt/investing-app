@@ -28,4 +28,12 @@ def indices():
 
         index_info = indices()
 
-        return render_template('account/indices.html', index_info=index_info)
+        if index_info == None:
+            return "Not available"
+
+        else:
+            title = index_info['title']
+            id = index_info['id']
+            frequency = index_info['frequency']
+
+        return render_template('account/indices.html', title=title, id=id, frequency=frequency)
