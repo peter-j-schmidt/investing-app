@@ -13,3 +13,19 @@ def home():
     if request.method == "GET":
 
         return render_template('account/home.html')
+
+
+@bp.route('/quote', methods = ['GET', 'POST'])
+def quote():
+    if request.method == "GET":
+
+        return render_template('account/home.html')
+
+
+bp.route('indices', methods = ['GET', 'POST'])
+def indices():
+    if request.method == "GET":
+
+        index_info = indices()
+
+        return render_template('account/indices.html', index_info)
