@@ -19,21 +19,21 @@ def home():
 def quote():
     if request.method == "GET":
 
-        return render_template('account/home.html')
+        return render_template('account/quote.html')
 
 
-bp.route('indices', methods = ['GET', 'POST'])
+bp.route('/indices', methods = ['GET', 'POST'])
 def indices():
     if request.method == "GET":
 
-        index_info = indices()
+        index_info = index_info()
 
         if index_info == None:
-            return "Not available"
+            return render_template("account/quote.html")
 
         else:
             title = index_info['title']
             id = index_info['id']
             frequency = index_info['frequency']
 
-        return render_template('account/indices.html', title=title, id=id, frequency=frequency)
+        return render_template('account/quote.html', title=title, id=id, frequency=frequency)
